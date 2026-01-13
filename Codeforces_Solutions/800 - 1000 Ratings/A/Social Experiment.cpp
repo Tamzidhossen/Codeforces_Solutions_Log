@@ -9,8 +9,22 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Social Experiment
+ * Problem Link: https://codeforces.com/contest/2184/problem/A
+ * Difficulty: Contest
+ * Topic: Math
+ */
+
 void Solutions(){
-    
+    int n; cin >> n;
+    if(n==2 || n==3){
+        cout << n << endl;
+    } else if(n%2==0){
+        cout << 0 << endl;
+    } else {
+        cout << 1 << endl;
+    }
 }
 
 int main()
