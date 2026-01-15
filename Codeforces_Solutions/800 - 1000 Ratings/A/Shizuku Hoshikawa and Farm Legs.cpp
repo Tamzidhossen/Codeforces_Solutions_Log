@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Shizuku Hoshikawa and Farm Legs
+ * Problem Link: https://codeforces.com/contest/2171/problem/A
+ * Difficulty: 800
+ * Topic: Brute force, Math
+ */
+
 void Solutions(){
     int n; cin >> n;
 
