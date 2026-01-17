@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Little Fairy's Painting
+ * Problem Link: https://codeforces.com/problemset/problem/2175/A
+ * Difficulty: 800
+ * Topic: Implementation
+ */
+
 void Solutions(){
     int n; cin >> n;
     vector<int> v(n);
@@ -34,7 +41,7 @@ void Solutions(){
         s.insert(uniqueCount);
     }
 
-    cout << s.size() << "\n";
+    cout << s.size() << endl;
 }
 
 int main()
