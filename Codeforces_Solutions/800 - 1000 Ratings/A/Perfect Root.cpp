@@ -4,7 +4,7 @@ using namespace std;
 #define optimize() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 #define ll long long
 #define FOR(i,x) for(ll i=0; i<x; i++)
-#define FORN(i,x) for(ll i=1; i<x; i++)
+#define FORN(i,x) for(ll i=1; i<=x; i++)
 
 #define tc() ll t; cin >> t; while(t--) Solutions()
 void file()
@@ -15,6 +15,13 @@ void file()
     // freopen("error.txt","w",stderr);
     #endif
 }
+
+/**
+ * Problem Name: Perfect Root
+ * Problem Link: https://codeforces.com/contest/2185/problem/A
+ * Difficulty: 800
+ * Topic: Constructive algorithms, Math
+ */
 
 void Solutions(){
     int n; cin >> n;
