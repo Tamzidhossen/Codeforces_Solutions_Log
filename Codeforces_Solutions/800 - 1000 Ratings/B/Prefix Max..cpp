@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Prefix Max
+ * Problem Link: https://codeforces.com/contest/2185/problem/B
+ * Difficulty: Contest
+ * Topic: Greedy
+ */
+
 void Solutions(){
     int n; cin >> n;
     vector<int>v;
@@ -25,7 +32,6 @@ void Solutions(){
     }
     sort(v.begin(), v.end());
     for(auto u:v){ st.push(u); }
-    // st.pop();
     cout << st.top()*n << endl;
 }
 
