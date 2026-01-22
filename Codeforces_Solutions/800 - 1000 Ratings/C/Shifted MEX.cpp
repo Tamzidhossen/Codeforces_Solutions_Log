@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Shifted MEX
+ * Problem Link: https://codeforces.com/contest/2185/problem/C
+ * Difficulty: Contest
+ * Topic: Implementation, Sortings
+ */
+
 void Solutions(){
     int n; cin >> n;
     vector<int>v;
