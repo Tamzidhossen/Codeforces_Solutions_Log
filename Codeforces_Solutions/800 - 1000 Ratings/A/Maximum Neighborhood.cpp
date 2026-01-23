@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Maximum Neighborhood
+ * Problem Link: https://codeforces.com/problemset/problem/2170/A
+ * Difficulty: 800
+ * Topic: Bitmasks, Brute force, Greedy, Implementation, Math
+ */
+
 void Solutions(){
     int n; cin >> n;
 
