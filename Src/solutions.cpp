@@ -18,8 +18,24 @@ void file()
 
 void Solutions(){
     int n; cin >> n;
+    vector<string> words(n);
+    string s = "";
 
-    cout << (n==1 ? 1 : n==2 ? 9 : n==3 ? 29 : n==4 ? 56 : 5*(n*n-n-1)) << endl;
+    FOR(i,n) {
+        cin >> words[i];
+    }
+
+    FOR(i,n){
+        string font_add = s + words[i];
+        string back_add = words[i] + s;
+        if(font_add < back_add){
+            s = font_add;
+        }else{
+            s = back_add;
+        }
+    }
+    cout << s << "\n";
+    
 }
 
 int main()
