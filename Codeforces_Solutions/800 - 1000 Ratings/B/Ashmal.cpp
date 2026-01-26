@@ -16,24 +16,33 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Ashmal
+ * Problem Link: https://codeforces.com/problemset/problem/2180/B
+ * Difficulty: 800
+ * Topic: Greedy, Strings
+ */
+
 void Solutions(){
-    int n,s,x; cin >> n >> s >> x;
-    vector<int> v(n);
+    int n; cin >> n;
+    vector<string> words(n);
+    string s = "";
 
-    int cnt = 0;
     FOR(i,n) {
-        cin >> v[i];
-        cnt += v[i];
+        cin >> words[i];
     }
 
-    int cal = (s - cnt) % x;
-    if(cnt == s){
-        cout << "YES\n";
-    }else if(cnt < s && cal == 0){
-        cout << "YES\n";
-    }else{
-        cout << "NO\n";
+    FOR(i,n){
+        string font_add = s + words[i];
+        string back_add = words[i] + s;
+        if(font_add < back_add){
+            s = font_add;
+        }else{
+            s = back_add;
+        }
     }
+    cout << s << "\n";
+    
 }
 
 int main()

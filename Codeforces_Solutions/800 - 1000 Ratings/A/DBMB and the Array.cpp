@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: DBMB and the Array
+ * Problem Link: https://codeforces.com/contest/2193/problem/A
+ * Difficulty: 800
+ * Topic: Brute Force, Math
+ */
+
 void Solutions(){
     int n,s,x; cin >> n >> s >> x;
     vector<int> v(n);

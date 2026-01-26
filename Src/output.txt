@@ -1,3 +1,6 @@
-aminamirrimanima
-codeforces
-aababc
+YES
+YES
+NO
+NO
+YES
+YES
