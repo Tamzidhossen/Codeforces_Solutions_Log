@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Your Name
+ * Problem Link: https://codeforces.com/problemset/problem/2167/B
+ * Difficulty: 800
+ * Topic: Strings, Sorting
+ */
+
 void Solutions(){
     int n; cin >> n;
     string s1, s2; cin >> s1 >> s2;
