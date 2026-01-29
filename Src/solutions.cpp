@@ -17,12 +17,20 @@ void file()
 }
 
 void Solutions(){
-    int n; cin >> n;
-    string s1, s2; cin >> s1 >> s2;
-    sort(s1.begin(), s1.end());
-    sort(s2.begin(), s2.end());
-    
-    cout << (s1 == s2 ? "YES\n" : "NO\n");
+    int n, m; cin >> n >> m;
+
+    int tmp = 0, ans = 1, x;
+    FOR(i, m) {
+        cin >> x;
+        if(x == 1 && i != 0){
+            tmp = 1;
+        }
+    }
+    if(tmp == 0){
+        cout << n - x + 1 << "\n";
+    }else {
+        cout << ans << "\n";
+    }
 }
 
 int main()
