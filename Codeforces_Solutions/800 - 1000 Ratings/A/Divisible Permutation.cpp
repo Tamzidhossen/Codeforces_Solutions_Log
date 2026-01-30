@@ -16,6 +16,13 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Divisible Permutation
+ * Problem Link: https://codeforces.com/contest/2188/problem/A
+ * Difficulty: 
+ * Topic: Constructive Algorithms
+ */
+
 void Solutions(){
     int n;  cin >> n;
 
