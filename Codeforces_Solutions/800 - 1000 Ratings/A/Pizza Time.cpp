@@ -16,11 +16,17 @@ void file()
     #endif
 }
 
+/**
+ * Problem Name: Pizza Time
+ * Problem Link: https://codeforces.com/contest/2156/problem/A
+ * Difficulty: 800
+ * Topic: Brute force, Constructive Algorithms, gGreedy
+ */
+
 void Solutions(){
     int n;  cin >> n;
 
     cout << (n-1)/2 << endl;
-    
 }
 
 int main()
