@@ -17,9 +17,16 @@ void file()
 }
 
 void Solutions(){
-    int n;  cin >> n;
+    int x, y; cin >> x >> y;
 
-    cout << (n-1)/2 << endl;
+    if(x==y || y==1 || x-y==1){
+        cout << -1 << endl;
+    }
+    else if(y+1 < x){
+        cout << 3 << endl;
+    }else{
+        cout << 2 << endl;
+    }
     
 }
 
