@@ -17,10 +17,17 @@ void file()
 }
 
 void Solutions(){
-    int cnt = 5;
-    for(int i=0; i<cnt; ++i) cout << i << " ";
-    cout << endl;
-    for(int i=0; i<cnt; i++) cout << i << " ";
+    int x, y; cin >> x >> y;
+
+    if(x==y || y==1 || x-y==1){
+        cout << -1 << endl;
+    }
+    else if(y+1 < x){
+        cout << 3 << endl;
+    }else{
+        cout << 2 << endl;
+    }
+    
 }
 
 int main()
