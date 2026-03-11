@@ -1,2 +1,3 @@
-if(u % 2 == 0) tmp1++;
-        // else tmp2++;
+FOR(i, n){
+    //     // swap(v[i], v[n-i-1]);
+    // }

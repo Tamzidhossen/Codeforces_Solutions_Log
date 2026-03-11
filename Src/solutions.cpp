@@ -17,10 +17,55 @@ void file()
 }
 
 void Solutions(){
-    int cnt = 5;
-    for(int i=0; i<cnt; ++i) cout << i << " ";
-    cout << endl;
-    for(int i=0; i<cnt; i++) cout << i << " ";
+    // int x, y;  //Big O(1)
+    // cin >> x >> y;  //Big O(1)
+
+    /*set <int> st;
+    for(int i=0; i< x; i++){
+        int v; cin >> v;
+        st.insert(v);
+    }
+    cout << st.size();*/
+
+    /*pair <string, int> info1, info2;
+    cin >> info1.first >> info1.second;
+    cin >> info2.first >> info2.second;
+
+    if(info2.first < info1.first){
+        swap(info1, info2);
+    }
+
+    cout << info1.first << " " << info1.second;*/
+
+    int n; cin >> n;
+    /* int target; cin >> target;
+    int arr[n];
+
+    for(int i=0; i<n; i++){
+        cin >> arr[i];
+    } */
+
+    /*for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            // cout << arr[i] << ", " << arr[j] << endl;
+            if(arr[i] + arr[j] == target){
+                cout << i << ", " << j << endl;
+                return;
+            }
+        }
+    }*/   //Complexity Big O(n^2)
+
+    int cnt = 0;
+    for(int i=1; i*i<=n; i++){
+        if(n%i==0){
+            cout << i << " ";
+            if(i != n/i){
+                cout << n/i << " ";
+            }
+        }
+        cout << endl;
+    }
+    cout << endl;    //Complexity  Big O(Root/n)
 }
 
 int main()
