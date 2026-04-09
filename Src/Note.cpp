@@ -95,15 +95,14 @@ void Solutions2(){
     }
 }
 
-int Sum(int n){
-    if(n == 1) return 1;
+void Sum(int n){    //This is Head Recursion
+    if(n == 1) return;  //First Call Then Work
+    Sum(n-1);
     cout << n << " ";
-    return Sum(n-1);
 }
 
 void Solutions(){
-    int res = Sum(15);
-    cout << res << endl;
+    Sum(15);
 }
 
 int main()
