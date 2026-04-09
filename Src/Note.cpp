@@ -6,8 +6,8 @@ using namespace std;
 #define FOR(i,x) for(ll i=0; i<x; i++)
 #define FORN(i,x) for(ll i=1; i<=x; i++)
 
-// #define tc() ll t; cin >> t; while(t--) Solutions()
-#define tc() ll t; cin >> t; while(t--) next_permutation()
+#define tc() ll t; cin >> t; while(t--) Solutions()
+// #define tc() ll t; cin >> t; while(t--) next_permutation()
 void file()
 {
     #ifndef ONLINE_JUDGE
@@ -17,7 +17,7 @@ void file()
     #endif
 }
 
-void Solutions(){
+void Solutions1(){
 
     int n, target; cin >> n >> target;
     vector <int> v(n);
@@ -62,6 +62,48 @@ int next_permutation(){
         for(int x: v) cout << x << " ";     //Space O(1)
         cout << endl;
     } while(next_permutation(v.begin(), v.end()));  //Time Complexity O(n!)
+}
+
+void Solutions2(){
+    int arr[] = { 3, 2, 5, 2, 2, 1, 3, 4};
+
+    // for(int i=0; i<8; i++){
+    //     bool isDuplicate = false;
+    //     for(int j=0; j<i; j++){
+    //         if(arr[i] == arr[j]){
+    //             isDuplicate = true;
+    //             break;
+    //         }
+    //     }
+    //     if(!isDuplicate){
+    //         cout << arr[i] << " ";
+    //     }
+    // }
+    // cout << endl;
+
+    for(int i=0; i<8; i++){
+        bool isDuplicate = false;
+        for(int j=0; j<8; j++){
+            if(arr[i] == arr[j]){
+                isDuplicate = true;
+                break;
+            }
+        }
+        if(!isDuplicate){
+            cout << arr[i] << " ";
+        }
+    }
+}
+
+int Sum(int n){
+    if(n == 1) return 1;
+    cout << n << " ";
+    return Sum(n-1);
+}
+
+void Solutions(){
+    int res = Sum(15);
+    cout << res << endl;
 }
 
 int main()
