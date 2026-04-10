@@ -95,14 +95,32 @@ void Solutions2(){
     }
 }
 
-void Sum(int n){    //This is Head Recursion
+void Sum1(int n){    //This is Head Recursion
     if(n == 1) return;  //First Call Then Work
-    Sum(n-1);
+    Sum1(n-1);
     cout << n << " ";
+}   //Output: 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+
+void Sum(int n){    //This is Tail Recursion
+    if(n == 1) return;  //First Work Then Call
+    cout << n << " ";
+    Sum(n-1);
+}   //Output: 15 14 13 12 11 10 9 8 7 6 5 4 3 2
+
+int Addition1(int n, int ans){   //This is Tail Recursion With Accumulator
+    if(n == 1) return ans;
+    ans+=n;
+    return Addition1(n-1, ans);
+}
+
+int Addition(int n){
+    if(n == 1) return 0;
+    return Addition(n-1) + n;
 }
 
 void Solutions(){
-    Sum(15);
+    int res = Addition(15);
+    cout << res << endl;
 }
 
 int main()
