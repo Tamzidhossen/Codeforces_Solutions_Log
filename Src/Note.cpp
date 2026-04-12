@@ -118,9 +118,16 @@ int Addition(int n){
     return Addition(n-1) + n;
 }
 
+int print(int n, int cnt){
+    if(n < 1) return cnt;
+    cnt += n;
+    print(n - 1, cnt);
+
+}
+
 void Solutions(){
-    int res = Addition(15);
-    cout << res << endl;
+    int n = 4, sum = 0;
+    cout << print(n, sum);
 }
 
 int main()
