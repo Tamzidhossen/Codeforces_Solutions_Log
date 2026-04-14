@@ -119,15 +119,16 @@ int Addition(int n){
 }
 
 int print(int n){
-    if(n > 8) return 0;
-    cout << n << " ";
-    return n + print(n+2);
-    
+    if(n <= 1) return n;
+
+    return print(n-1) + print(n-2); 
 }
 
 void Solutions(){
-    int n = 1;
-    cout << print(n);
+    int n = 8;
+    for(int i=0; i<n; i++){
+        cout << print(i) << " ";
+    }
 }
 
 int main()
