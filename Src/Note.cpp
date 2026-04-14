@@ -118,16 +118,16 @@ int Addition(int n){
     return Addition(n-1) + n;
 }
 
-int print(int n, int cnt){
-    if(n < 1) return cnt;
-    cnt += n;
-    print(n - 1, cnt);
-
+int print(int n){
+    if(n > 8) return 0;
+    cout << n << " ";
+    return n + print(n+2);
+    
 }
 
 void Solutions(){
-    int n = 4, sum = 0;
-    cout << print(n, sum);
+    int n = 1;
+    cout << print(n);
 }
 
 int main()
