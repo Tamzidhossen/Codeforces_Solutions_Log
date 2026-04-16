@@ -118,17 +118,24 @@ int Addition(int n){
     return Addition(n-1) + n;
 }
 
-int print(int n){
+int Fibonacci(int n){       //Using Recursion
     if(n <= 1) return n;
+    return Fibonacci(n-1) + Fibonacci(n-2); 
 
-    return print(n-1) + print(n-2); 
+    /*int n = 8;
+    for(int i=0; i<n; i++){
+        cout << Fibonacci(i) << " ";
+    }*/     //Output: 0 1 1 2 3 5 8 13
+}
+
+int Factorial(int n){       //Using Recursion
+    if(n == 1) return 1;
+    return n * Factorial(n - 1);
 }
 
 void Solutions(){
-    int n = 8;
-    for(int i=0; i<n; i++){
-        cout << print(i) << " ";
-    }
+    int n = 5;
+    cout << Factorial(n) << endl;
 }
 
 int main()
