@@ -131,11 +131,22 @@ int Fibonacci(int n){       //Using Recursion
 int Factorial(int n){       //Using Recursion
     if(n == 1) return 1;
     return n * Factorial(n - 1);
+
+    // int n = 5;
+    // cout << Factorial(n) << endl;
+}
+
+int ArrSum(int arr[], int n){
+    if(n == 0) {
+        return 0;
+    }
+    return  arr[n - 1] + ArrSum(arr, n-1);
 }
 
 void Solutions(){
+    int arr[] = {1, 2, 3, 4, 5};
     int n = 5;
-    cout << Factorial(n) << endl;
+    cout << ArrSum(arr, n);
 }
 
 int main()
