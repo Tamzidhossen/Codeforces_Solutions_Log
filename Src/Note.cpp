@@ -136,17 +136,25 @@ int Factorial(int n){       //Using Recursion
     // cout << Factorial(n) << endl;
 }
 
-int ArrSum(int arr[], int n){
+int ArrSum(int arr[], int n){   //Using Recursion
     if(n == 0) {
         return 0;
     }
     return  arr[n - 1] + ArrSum(arr, n-1);
+
+    // int arr[] = {1, 2, 3, 4, 5};
+    // int n = 5;
+    // cout << ArrSum(arr, n);
+}
+
+int Power(int x, int n){
+    if(n == 0) return 1;
+    return x * Power(x, n-1);
 }
 
 void Solutions(){
-    int arr[] = {1, 2, 3, 4, 5};
-    int n = 5;
-    cout << ArrSum(arr, n);
+    int n = 10;
+    cout << Power(2, n);
 }
 
 int main()
