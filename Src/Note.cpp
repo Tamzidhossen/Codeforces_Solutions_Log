@@ -150,11 +150,13 @@ int ArrSum(int arr[], int n){   //Using Recursion
 int Power(int x, int n){
     if(n == 0) return 1;
     return x * Power(x, n-1);
+
+    // int n = 10;
+    // cout << Power(2, n);
 }
 
 void Solutions(){
-    int n = 10;
-    cout << Power(2, n);
+    
 }
 
 int main()
