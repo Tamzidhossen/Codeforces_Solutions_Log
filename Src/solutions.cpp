@@ -16,7 +16,7 @@ void file()
     #endif
 }
 
-void Solutions(){
+void Solutions1(){
     // int x, y;  //Big O(1)
     // cin >> x >> y;  //Big O(1)
 
@@ -66,6 +66,12 @@ void Solutions(){
         cout << endl;
     }
     cout << endl;    //Complexity  Big O(Root/n)
+}
+
+void Solutions(){
+    int x, y; cin >> x >> y;
+
+    cout << ((x%2 == 1 && y%2 == 1) ? "no":"yes") ; 
 }
 
 int main()
