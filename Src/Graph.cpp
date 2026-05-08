@@ -16,7 +16,7 @@ void file()
     #endif
 }
 
-void Solutions(){
+void Solutions1(){
     //Adjacency List
 
     int n; // n = number of Nodes
@@ -30,6 +30,45 @@ void Solutions(){
         graph[u].push_back(v);
         graph[v].push_back(i);
     }
+}
+
+vector<int> graph[7];
+
+void bfs(int start){
+    
+
+    bool visited[7] = { false };
+    queue<int> q;
+
+    visited[start] = true;
+    q.push(start);
+
+    cout << "BFS: ";
+    while(!q.empty()){
+        int node = q.front();
+        q.pop();
+        cout << node << " ";
+
+        for(int neighbor : graph[node]) {
+            if(!visited[neighbor]) {
+                visited[neighbor] = true;
+                q.push(neighbor);
+            }
+        }
+    }
+    cout << endl;
+}
+
+void Solutions(){
+    graph[1] = {2, 3};
+    graph[2] = {1, 4, 5};
+    graph[3] = {1, 6};
+    graph[4] = {2};
+    graph[5] = {2};
+    graph[6] = {3};
+
+    bfs(1);
+    // return 0;
 }
 
 int main()
