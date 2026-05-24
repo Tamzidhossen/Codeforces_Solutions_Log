@@ -36,7 +36,6 @@ vector<int> graph[7];
 
 void bfs(int start){
     
-
     bool visited[7] = { false };
     queue<int> q;
 
