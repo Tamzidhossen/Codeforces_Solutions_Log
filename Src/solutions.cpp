@@ -69,9 +69,9 @@ void Solutions1(){
 }
 
 void Solutions(){
-    int x, y; cin >> x >> y;
-
-    cout << ((x%2 == 1 && y%2 == 1) ? "no":"yes") ; 
+    vector<int> v= {1,4,3,5,2,7};
+    for(auto u: v) cout << u << " ";
+    cout << endl; 
 }
 
 int main()

@@ -36,7 +36,7 @@ int subset(vector<int> &nums, vector<int> &ans, int idx){
 }
 
 void Solutions(){
-    vector<int> nums={1,2};
+    vector<int> nums={1,2,3};
     vector<int> ans;
 
     subset(nums, ans, 0);
