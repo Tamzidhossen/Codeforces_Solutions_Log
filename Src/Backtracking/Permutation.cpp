@@ -16,31 +16,13 @@ void file()
     #endif
 }
 
-int subset(vector<int> &nums, vector<int> &ans, int idx){
-    //Base Case
-    if(idx == nums.size()){
-        cout << "{ ";
-        for(auto u: ans){
-            cout << u << " ";
-        }
-        cout << "}" << endl;
-        return 0;
-    }
-
-    ans.push_back(nums[idx]);
-    subset(nums, ans, idx+1);
-
-    //Backtrack
-    ans.pop_back();
-    subset(nums, ans, idx+1);
-}
-
 int permutation(vector<int> &nums, int idx){
-    if(idx == nums.size()){
+    if(idx == nums.size()){ //Base Case
         cout << "{ ";
         for(auto u: nums){ cout << u << " ";}
         cout << "}" << endl;
     }
+
     for(int i=idx; i<nums.size(); i++){
         swap(nums[idx], nums[i]);
 
@@ -50,7 +32,6 @@ int permutation(vector<int> &nums, int idx){
 }
 void Solutions(){
     vector<int> nums={1,2,3};
-    //vector<int> ans;
 
     permutation(nums, 0);
 }
