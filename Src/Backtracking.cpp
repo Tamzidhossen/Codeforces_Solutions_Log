@@ -41,6 +41,7 @@ int permutation(vector<int> &nums, int idx){
         for(auto u: nums){ cout << u << " ";}
         cout << "}" << endl;
     }
+    
     for(int i=idx; i<nums.size(); i++){
         swap(nums[idx], nums[i]);
 
@@ -48,11 +49,36 @@ int permutation(vector<int> &nums, int idx){
         swap(nums[idx], nums[i]);
     }
 }
-void Solutions(){
-    vector<int> nums={1,2,3};
-    //vector<int> ans;
 
-    permutation(nums, 0);
+void combination_sum(vector<int> &nums, vector<int> &ans, int idx, int target){
+
+    if(target == 0){
+        cout << "{ ";
+        for(auto u:ans){
+            cout << u << " ";
+        }
+        cout << "}" << endl;
+        return;
+    }
+
+    if(target<0) return;
+
+    for(int i=idx; i<nums.size(); i++){
+        ans.push_back(nums[i]);
+        combination_sum(nums, ans, i, target-nums[i]);
+
+        ans.pop_back();
+    }
+}
+
+int Solutions(){
+    vector<int> nums={2,3,6,7};
+    vector<int> ans;
+    int target = 7;
+
+    combination_sum(nums, ans, 0, target);
+
+    return 0;
 }
 
 int main()
