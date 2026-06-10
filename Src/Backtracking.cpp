@@ -74,7 +74,7 @@ void combination_sum(vector<int> &nums, vector<int> &ans, int idx, int target){
 int Solutions(){
     vector<int> nums={2,3,6,7};
     vector<int> ans;
-    int target = 7;
+    int target = 6;
 
     combination_sum(nums, ans, 0, target);
 
