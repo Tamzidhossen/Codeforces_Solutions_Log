@@ -43,7 +43,7 @@ void bfs(int start){
     cout << endl;
 }
 
-void Solutions(){
+void Solutions1(){
     graph[1] = {2, 3};
     graph[2] = {1, 4, 5};
     graph[3] = {1, 6};
@@ -55,6 +55,31 @@ void Solutions(){
     // return 0;
 }
 
+void dfs(vector<vector<int>> &ans, vector<bool> &visited, int start){
+    visited[start] = true;
+    cout << start << " ";
+
+    for(int neighbor: ans[start]){
+        if(!visited[neighbor]){
+            dfs(ans, visited, neighbor);
+        }
+    }
+}
+
+void Solutions(){
+    vector<vector<int>> ans(6);
+
+    ans[0].push_back(1);  ans[1].push_back(0);
+    ans[0].push_back(2);  ans[2].push_back(0);
+    ans[1].push_back(3);  ans[1].push_back(4);
+    ans[3].push_back(1);  ans[4].push_back(1);
+    ans[2].push_back(5);  ans[5].push_back(2);
+
+    int start = 0;
+    vector<bool> visited(6, false);
+    cout << "DFS form Node: ";
+    dfs(ans, visited, start);
+}
 
 int main()
 {
